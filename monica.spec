@@ -1,5 +1,5 @@
 Name:           monica
-Version:        3.6
+Version:        3.7
 Release:        %mkrel 1
 Summary:        Monitor Calibration Tool
 License:        BSD
@@ -35,6 +35,7 @@ the Web, and sRGB standard.
 
 %files
 %defattr(0644,root,root,0755)
-%doc AUTHORS ChangeLog INSTALL LICENCE NEWS README
+#%%doc AUTHORS ChangeLog INSTALL LICENCE NEWS README
+%doc authors ChangeLog install licence news readme
 %attr(0755,root,root) %{_bindir}/monica
 
