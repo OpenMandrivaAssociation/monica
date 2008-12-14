@@ -1,16 +1,14 @@
 Name:           monica
 Version:        3.7
-Release:        %mkrel 3
+Release:        %mkrel 4
 Summary:        Monitor Calibration Tool
 License:        BSD
 Group:          System/Kernel and hardware
 URL:            http://www.pcbypaul.com/software/monica.html
 Source0:        http://www.pcbypaul.com/software/dl/monica-%{version}.tar.bz2
+Patch0:		monica-3.7-use-ldflags.patch
 Requires:       xgamma
-BuildRequires:  fontconfig
 BuildRequires:  fltk-devel
-BuildRequires:  libxext-devel
-BuildRequires:  libxft-devel
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
 
 %description
@@ -21,9 +19,10 @@ the Web, and sRGB standard.
 
 %prep
 %setup -q
+%patch0 -p0 -b .orig
 
 %build
-%{make} CXX="g++ %{optflags}"
+%{make} CFLAGS="%{optflags}" LDFLAGS="%{?ldflags}"
 
 %install
 %{__rm} -rf %{buildroot}
@@ -35,7 +34,6 @@ the Web, and sRGB standard.
 
 %files
 %defattr(0644,root,root,0755)
-#%%doc AUTHORS ChangeLog INSTALL LICENCE NEWS README
 %doc authors ChangeLog install licence news readme
 %attr(0755,root,root) %{_bindir}/monica
 
