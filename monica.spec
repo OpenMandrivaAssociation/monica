@@ -4,9 +4,11 @@ Release:        %mkrel 6
 Summary:        Monitor Calibration Tool
 License:        BSD
 Group:          System/Kernel and hardware
-URL:            http://www.pcbypaul.com/software/monica.html
+URL:            http://www.pcbypaul.com/software/monica.shtml
 Source0:        http://www.pcbypaul.com/software/dl/monica-%{version}.tar.bz2
 Patch0:		monica-3.7-use-ldflags.patch
+Patch1:		monica-3.7-mdv-fix-gcc43.patch
+patch2:		monica-3.7-mdv-fix-str-fmt.patch
 Requires:       xgamma
 BuildRequires:  fltk-devel
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
@@ -20,6 +22,8 @@ the Web, and sRGB standard.
 %prep
 %setup -q
 %patch0 -p0 -b .orig
+%patch1 -p1 -b .gcc43
+%patch2 -p1 -b .strfmt
 
 %build
 %{make} CFLAGS="%{optflags}" LDFLAGS="%{?ldflags}"
