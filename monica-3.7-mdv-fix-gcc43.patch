@@ -1,0 +1,11 @@
+diff -p -up monica-3.7/monica.cpp.gcc43 monica-3.7/monica.cpp
+--- monica-3.7/monica.cpp.gcc43	2010-01-21 23:40:57.000000000 +0100
++++ monica-3.7/monica.cpp	2010-01-21 23:41:38.000000000 +0100
+@@ -15,6 +15,7 @@
+ #include <FL/Fl_Pixmap.H>
+ 
+ #include <cstdlib>
++#include <cstdio>
+ #include <string>
+ #include <iostream>
+ using namespace std;
