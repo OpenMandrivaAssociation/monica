@@ -1,6 +1,6 @@
 Name:           monica
 Version:        3.7
-Release:        %mkrel 7
+Release:        8
 Summary:        Monitor Calibration Tool
 License:        BSD
 Group:          System/Kernel and hardware
