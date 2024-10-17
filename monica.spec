@@ -4,7 +4,7 @@ Release:        8
 Summary:        Monitor Calibration Tool
 License:        BSD
 Group:          System/Kernel and hardware
-URL:            http://www.pcbypaul.com/software/monica.shtml
+URL:            https://www.pcbypaul.com/software/monica.shtml
 Source0:        http://www.pcbypaul.com/software/dl/monica-%{version}.tar.bz2
 Patch0:		monica-3.7-use-ldflags.patch
 Patch1:		monica-3.7-mdv-fix-gcc43.patch
