@@ -10,6 +10,7 @@ Patch0:		monica-3.7-use-ldflags.patch
 Patch1:		monica-3.7-mdv-fix-gcc43.patch
 patch2:		monica-3.7-mdv-fix-str-fmt.patch
 Requires:       xgamma
+BuildRequires:	make
 BuildRequires:  fltk-devel
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
 
